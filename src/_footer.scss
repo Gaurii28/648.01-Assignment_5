@@ -51,9 +51,9 @@ footer {
   @include footerImg('../images/social-media.png',$p - ($i * 38),0);
 }
 .social-media div.three {
-  @include footerImg('../images/social-media.png',$p - (($i+1) * 38),0);
+  @include footerImg('../images/social-media.png',$p - (($i + 1) * 38),0);
 }
 .social-media div.four {
-  @include footerImg('../images/social-media.png',$p - (($i+2) * 48),0);
+  @include footerImg('../images/social-media.png',$p - (($i + 2) * 38),0);
 }
 
