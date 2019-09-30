@@ -1,0 +1,12 @@
+@mixin break($l){
+    @media screen and (max-width:$l) {
+        @content;
+    }
+}
+@mixin footerImg($img:url('../images/social-media.png'),$x:0,$y:0){
+    background:url($img);
+    background-position: $x $y;
+}
+@mixin color($c:#fff){
+    color:$c;
+}

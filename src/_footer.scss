@@ -1,0 +1,59 @@
+.greybar {
+    width: 100%;
+    height: 90px;
+    background: $greybar-background-color;
+    clear: both;
+    padding-top: 30px;
+    @if max-width == 459px {
+        @include break(459px){display:none;};
+      }
+}
+footer {
+    width: 100%;
+    height: 120px;
+    background: $footer-background-color;
+    text-align: center;
+    @include color();
+    padding-top: 50px;
+    @if max-width == 459px {
+        @include break(459px){text-align:center;};
+      }
+    p{
+      @if max-width == 459px {
+        @include break(459px){float:none;margin:0;};
+      }
+    }
+    img {
+      @if max-width == 459px {
+        @include break(459px){float:none;margin:0;};
+      }
+    }
+}
+.social-media {
+  margin: 0 auto;
+  width: 165px;
+}
+.social-media div {
+  float: left;
+  margin-right: 5px;
+}
+.social-media a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  text-indent: -9999px;
+}
+// use of math operators
+.social-media div.one {
+  @include footerImg('../images/social-media.png',$p,0);
+}
+.social-media div.two {
+  @include footerImg('../images/social-media.png',$p - ($i * 38),0);
+}
+.social-media div.three {
+  @include footerImg('../images/social-media.png',$p - (($i+1) * 38),0);
+}
+.social-media div.four {
+  @include footerImg('../images/social-media.png',$p - (($i+2) * 48),0);
+}
+

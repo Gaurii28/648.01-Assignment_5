@@ -1,0 +1,63 @@
+header {
+  width: inherit;
+  clear: both;
+  text-align: center;
+  padding-top: 40px;
+}
+header img {
+    max-width: 100%;
+    height: auto;
+    @if max-width == 767px {
+        @include break(767px){margin-bottom:100px;};
+      }
+    @if max-width == 459px {
+        @include break(459px){margin-bottom:80px;};
+      }
+}
+header h1 {
+    @include color($header-color);
+    font-weight: 100;
+    font-size: 4em;
+    line-height: 0;
+    @if max-width == 959px {
+        @include break(959px){font-size:3em;};
+      }
+    @if max-width == 767px {
+        @include break(767px){font-size:2em;};
+      }
+    &:first-child{
+      @if max-width == 459px {
+        @include break(459px){font-size:1.4em;margin-bottom:20px;};
+      }
+
+    }
+}
+header h2 {
+    @include color();
+    font-weight: 900;
+    font-size: 2.5em;
+    line-height: 0;
+    margin-bottom: 70px;
+    @if max-width == 959px {
+        @include break(959px){font-size:1.5em;};
+      }
+    @if max-width == 767px {
+        @include break(767px){font-size:1em;};
+      }
+    @if max-width == 459px {
+        @include break(459px){font-size:1.4em;};
+      }
+}
+header h3 {
+    @include color($header-h3-color);
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 0;
+    margin-bottom: 50px;
+    @if max-width == 767px {
+        @include break(767px){font-size:1.5em;};
+      }
+    @if max-width == 459px {
+        @include break(459px){@include color();font-size:1em;};
+      }
+}
